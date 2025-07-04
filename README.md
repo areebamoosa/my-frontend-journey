@@ -4,12 +4,12 @@ Welcome to **My Frontend Journey** – a personal breakdown of my learning path 
 
 Although I’ve already completed the initial learning of **HTML** and **CSS**, this repository restructures that knowledge into a clear, topic-based documentation format.
 
-## 📘 What's Inside
+## 📘  What's Inside
 
 - Structured notes on core HTML & CSS concepts  
 - Ongoing updates as I continue to learn and grow  
 
-🚀 What's Next
+🚀  What's Next
 
 This repository will expand to include my continued learning in:
 
@@ -19,7 +19,7 @@ This repository will expand to include my continued learning in:
 
 These technologies form the core stack of my front-end development journey.
 
-## 🎯 Purpose
+## 🎯  Purpose
 
 This repo helps me:
 - Reinforce and organise what I've learned  
