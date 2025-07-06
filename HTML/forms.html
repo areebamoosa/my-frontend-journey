@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+
+    <!-- Form ka kaam hota hai data collect krna aur backend.php ye ek file hy jahn data submit krty -->
+    <form action="backend.php">
+      <label for="name">Name</label>
+      <div>
+        <input type="text" name="myName" id="name" />
+        <!-- the benefit of label is that by clicking on name automatically wo name enter krny deingy without you having to click on the box -->
+      </div>
+      <br />
+
+      <div>
+        <!-- ID input field for user -->
+        ID : <input type="text" name="myId" />
+      </div>
+      <br />
+
+      <div>
+        <!-- User email field -->
+        Email : <input type="text" name="myEmail" />
+      </div>
+      <br />
+
+      <div>
+        <!-- Calendar pop up aayega date choose krny k liye -->
+        Date : <input type="date" name="myDate" />
+      </div>
+      <br />
+
+      <div>
+        <!-- number type nahi likha but expected marks ya numbers yahan hon -->
+        Marks : <input type="marks" name="myMarks" />
+        <!-- ideally yahan type="number" hona chahiye -->
+      </div>
+      <br />
+
+      <div>
+        <!-- checkbox multiple choice type hota hai -->
+        Are you Eligible? : <input type="checkbox" name="myEligibilty" />
+      </div>
+      <br />
+
+      <div>
+        <!-- Radio buttons mein name same hona chahiye so only ek radio select ho -->
+        Gender : Male <input type="radio" name="myGender" /> Female
+        <input type="radio" name="myGender" />
+      </div>
+      <br />
+
+      <div>
+        <!-- select dropdown for car options -->
+        <label for="car"> Car </label>
+        <select name="myCar" id="Car">
+          <option value="rev">Revo</option>
+          <option value="fort">Fortuner</option>
+        </select>
+      </div>
+      <br />
+
+      <div>
+        <!-- user yahan apny baary mein likh skta hai -->
+        Write about yourself : <br />
+        <textarea name="myText" cols="50" rows="50"></textarea>
+      </div>
+      <br />
+
+      <div>
+        <!-- submit button form ko send krta hai -->
+        <input type="submit" value="Submit Now" />
+        <!-- reset button sab fields clear kr deta hai -->
+        <input type="reset" value="Reset Now" />
+        <!-- button tag bhi submit k liye use hota hai -->
+        <button>Submit Now</button>
+      </div>
+    </form>
+  </body>
+</html>
