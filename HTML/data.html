@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data</title>
+  </head>
+  <body>
+    <!-- Date Format -->
+
+    <form action="" method="get">
+      Select Date : <input type="date" />
+      <input type="submit" value="Ok" />
+    </form>
+
+    <!-- Time Format -->
+
+    <form action="" method="get">
+      Select Time : <input type="time" />
+      <input type="submit" value="Ok" />
+    </form>
+
+    <!-- Both Date & Time -->
+
+    <form action="" method="get">
+      Local Date & Time : <input type="datetime-local" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- We ca also write date & time as this -->
+
+    <form action="" method="get">
+      Date & Time : <input type="datetime" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Month Format -->
+
+    <form action="" method="get">
+      Month : <input type="month" />
+      <input type="submit" value="Ok" />
+    </form>
+
+    <!-- Range Format -->
+
+    <form action="" method="get">
+      Select any Number:
+      <input type="range" min="0" max="1000" step="1" value="10" />
+      <input type="submit" value="Submit this Number" />
+    </form>
+
+    <!-- Email Address  -->
+
+    <form action="" method="get">
+      Enter Email Address: <input type="email" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Auto Focus
+The autofocus attribute automatically places the cursor inside an input field when the page loads — so the user can start typing immediately without clicking.-->
+
+    <form>
+      <input type="text" placeholder="Your name" autofocus />
+      <input type="email" placeholder="Your email" />
+    </form>
+
+    <!-- When you open this page, the cursor will already be blinking in the “Your name” field. -->
+
+    <!-- Notes:
+  You can use autofocus on:
+  <input>
+  <textarea>
+  <select>
+  Only one element can have autofocus per page.
+  Doesn’t need a value: just autofocus (boolean attribute). -->
+
+    <!-- Password  -->
+
+    <form action="" method="post">
+      Enter Password : <input type="password" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Multiple User Input -->
+
+    <form action="" method="get">
+      Username : <input type="text" /> Password :
+      <input type="password" /> Email : <input type="email" /> Address :
+      <input type="text" />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- User Input Validation -->
+    <!-- Required
+     The required attribute makes an input field mandatory — the form won’t submit unless the user fills it in.-->
+
+    <form action="" method="post">
+      Username : <input type="text" required /> Password :
+      <input type="password" required /> Email :
+      <input type="email" required /> Address : <input type="text" required />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
