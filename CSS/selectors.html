@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+
+    <style>
+      /* # is for id & . is for class */
+
+      /* ID Selector*/
+      #redElement {
+        color: red;
+      }
+
+      /* Element Selector */
+      p {
+        border: 2px solid red;
+      }
+
+      /* Class Selector */
+      .green {
+        color: yellow;
+      }
+      .bgblue {
+        background-color: blue;
+      }
+
+      /* Grouping Selector */
+      footer,
+      span {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>CSS SELECTORS</h3>
+
+    <!-- By applying id on ann element and implying CSS colors, only that specific element gets the properties applied. -->
+    <p id="redElement">
+      This is a simple paragraph to demonstrate CSS Selectors
+    </p>
+
+    <div>
+      <p id="Pink" class="green bgblue">
+        This is a simple paragraph inside div to demonstrate CSS Selectors
+      </p>
+      <span>Front End Development</span>
+    </div>
+
+    <footer>Full Stack Developer</footer>
+  </body>
+</html>
