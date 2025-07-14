@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables & Custom Properties</title>
+    <style>
+      :root {
+        --primary-color: blue;
+        --danger-color: red;
+        --maxw: 333px;
+      }
+      .box {
+        width: 300px;
+        height: 250px;
+        background-color: var(--primary-color);
+        border: 4px solid var(--danger-color);
+        box-shadow: 3px 2px var(--box-color);
+        margin: 20px 23px;
+      }
+      .container {
+        display: flex;
+        max-width: var(--maxw);
+        margin: auto;
+        background-color: var(--danger-color);
+        align-items: center;
+        justify-content: center;
+        background-color: var(--box-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <!-- What is :root?
+:root is a pseudo-class that refers to the top-most element in your HTML — which is the <html> tag.
+So basically, :root is like saying: "Let’s define global CSS variables here so we can use them anywhere in the CSS."
+
+What are these -- lines?
+These are CSS custom properties, also known as variables!
+
+Here's your example:
+
+:root {
+  --primary-color: blue;
+  --danger-color: red;
+  --maxw: 333px;
+}
+You just created 3 variables:
+
+
+Variable name	Value	Meaning
+--primary-color	blue	Your main color theme
+--danger-color	red	A warning or error color
+--maxw	333px	A max-width value
+
+How to use them:
+To use these variables in your CSS, you write:
+
+color: var(--primary-color);
+width: var(--maxw);
+Example:
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  max-width: var(--maxw);
+}
+This will apply the blue background and 333px max-width to your button, using the variables you defined in :root.
+
+Syntax	Meaning
+:root	Define global variables here
+--name: value;	Create a variable
+var(--name)	Use the variable
+-->
+  </body>
+</html>
