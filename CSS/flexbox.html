@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLEXBOX</title>
+    <style>
+      .container {
+        height: 1554px;
+        width: 100%px;
+        border: 4px solid rgb(23, 21, 21);
+        /* Initialize the container as a flexbox */
+        display: flex;
+
+        /* Flex properties*/
+
+        /* Flex-direction:
+        It decides which way the items will be placed inside a flex container. */
+
+        flex-direction: column;
+
+        /* flex-direction: row; row is by default value of flex */
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse;  ( Items go horizontally, but in reverse order (from right to left instead of left to right).)*/
+        /* flex-direction: column-reverse; */
+
+        /* By default, the property of flex is nowrap : the containers have to fit in one line no matter what */
+
+        flex-wrap: wrap;
+        /* Flex wrap : wrap is if the containers are not fitting in one line, then they can be fitted in the next line.  */
+ 
+        /* flex-wrap: wrap-reverse; */
+
+        /* Summary :  */
+
+        /* 
+        nowrap	(Default)  Don’t wrap — squish items into one line
+        wrap	 Wrap items to the next line if needed
+        wrap-reverse Wrap items to the next line in reverse order*/
+
+        /* flexflow is shortcut for both flex direction + flex wrap */
+        /* flex-flow: row-reverse wrap; */
+
+        /* justify-content: center; */
+
+        /* Space between means to give space to boxes in between and not on corners ( This puts one element at the start and one element at the bottom ) */
+        /* justify-content: space-between; */
+
+        /* Space evenly means to have space between all the boxes evenly */
+        /* justify-content: space-evenly; */
+
+        /* Space around means each box will have space on both left & right side */
+        /* justify-content: space-around; */
+
+        /* all items will be aligned on center */
+        /* align-items: center; */
+
+        /* items are by default flex start at the start before center alignment*/
+        /* align-items: flex-start; */
+
+        /* items will be aligned on the end of the container */
+        /* align-items: flex-end; */
+
+        /* align-items: stretch; */
+        /* stretch makes evenly space between boxes no matter how much you make its height/width long or short */
+
+        flex-direction: column;
+      }
+      .item {
+        width: 200px;
+        height: 200px;
+        /* background-color: rgb(249, 170, 183); */
+        border: 4px solid rgb(19, 18, 18);
+        margin: 10px;
+        padding: 20px;
+      }
+
+      /* flex properties for flex item */
+      #item1 {
+        background-color: red;
+        /* Bary orders waly boxes bad mn, choty orders waly boxes pehly dekhaingy */
+        /* higher the order, later it shows up in the container*/
+        /* order: 2; */
+
+        /* flex grow refers to taking space */
+        /* flex-grow: 2; */
+
+        /* flex-shrink: 3; */
+
+        /* when flex direction is set to row flex-basis: will conrtol width  */
+        /* when flex direction is set to column flex-basis: will conrtol height  */
+        /* flex-basis: 320px; */
+        /* The width of red item will be greater as compared to other items. */
+
+        /* flex-grow — “Can I grow?”
+
+        It controls how much an item should grow when there's extra space in the flex container.
+
+        flex-grow: 1;
+        Example:
+        If you have 3 boxes and each has flex-grow: 1, they will share extra space equally.
+
+        If one box has flex-grow: 2, and others have 1, then:
+
+        1st gets 2 parts of space
+        2nd & 3rd get 1 part each
+
+
+       flex-shrink — “Can I shrink?”
+
+       It controls how much an item should shrink when there’s not enough space.
+
+      flex-shrink: 1;
+
+
+      flex-shrink: 0;
+      It won’t shrink — it'll stay the same size even if it overflows.
+
+      flex-basis — “What’s my starting size?”
+
+      It sets the initial size of the item before grow or shrink happens.
+
+     flex-basis: 200px;
+     Means: “Start at 200px, then grow or shrink based on space and rules.” */
+      }
+      #item2 {
+        background-color: pink;
+        /* order: 40; */
+        /* flex-shrink: 1; */
+        /* align-self: flex-start; */
+      }
+      #item3 {
+        background-color: blue;
+        /* flex-grow: 3; */
+
+        /* shortcut */
+        /* flex = flexgrow + flexshrink + flexbasis */
+        flex: 2 2 334px;
+
+        align-self: flex-end;
+        align-self: flex-start;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FLEXBOX</h1>
+    <div class="container">
+      <div class="item" id="item1">First Box</div>
+      <div class="item" id="item2">Second Box</div>
+      <div class="item" id="item3">Third Box</div>
+      <!-- <div class="item" id="item4">Fourth Box</div> -->
+      <!-- <div class="item" id="item5">Fifth Box</div> -->
+      <!-- <div class="item" id="item6">Sixth Box</div> -->
+    </div>
+  </body>
+</html>
