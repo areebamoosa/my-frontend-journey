@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grids</title>
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 2rem;
+
+        /* grid-template-columns: 300px 100px 100px; */
+        /* Means 3 columns: 
+        1st = 300px, 
+        2nd = 100px, 
+        3rd = 100px */
+
+        /* grid-template-columns: 300px auto 100px; */
+        /* 1st = 300px, 
+        2nd = auto (takes remaining space), 
+        3rd = 100px */
+
+        /* grid-template-columns: 1fr 4fr 1fr; */
+        /* Fr = fraction of available space.
+        Total = 1 + 4 + 1 = 6 parts
+        So:
+        1st = 1/6
+        2nd = 4/6
+        3rd = 1/6 */
+
+        /* grid-template-columns: 300px 100px auto; */
+        /* Fixed + auto: 
+        3rd column will take remaining space */
+
+        /* grid-template-columns: repeat(3, auto); */
+        /* Same as: auto auto auto
+        Repeats the value 3 times */
+      }
+      .item {
+        background-color: pink;
+        margin: 3px;
+        border: 2px solid rgb(243, 136, 154);
+        padding: 12px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">This is Item # 01</div>
+
+      <!-- .container is the grid parent.
+      .items are the grid children (items that are placed in the grid) -->
+
+      <div class="item">This is Item # 02</div>
+      <div class="item">This is Item # 03</div>
+      <div class="item">This is Item # 04</div>
+      <div class="item">This is Item # 05</div>
+      <div class="item">This is Item # 06</div>
+      <div class="item">This is Item # 07</div>
+      <div class="item">This is Item # 08</div>
+      <div class="item">This is Item # 09</div>
+    </div>
+  </body>
+</html>
