@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries with CSS Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 1rem;
+        /* Initial layout using grid-template-areas */
+        grid-template-areas:
+          "navbar navbar navbar navbar"
+          "section section section section"
+          "footer footer footer footer";
+      }
+
+      /*  Media Query for devices with width ≤ 300px  */
+      @media only screen and (max-width: 300px) {
+        body {
+          background-color: red;
+        }
+        span {
+          display: block;
+          text-align: center;
+        }
+        .container {
+          /* Layout remains same here, could be changed if needed */
+          grid-template-areas:
+            "navbar navbar navbar navbar"
+            "section section section section"
+            "footer footer footer footer";
+        }
+      }
+
+      /*  Media Query for devices between 300px and 500px  */
+      @media only screen and (min-width: 300px) and (max-width: 500px) {
+        body {
+          background-color: rgb(82, 8, 156);
+        }
+        span {
+          display: block;
+          text-align: center;
+        }
+        /* No grid layout changes in this range */
+      }
+
+      /*  Media Query for devices between 500px and 800px  */
+      @media only screen and (min-width: 500px) and (max-width: 800px) {
+        body {
+          background-color: rgb(246, 239, 45);
+        }
+        .container {
+          /* Add an aside block in layout on mid-sized devices */
+          grid-template-areas:
+            "navbar navbar navbar navbar"
+            "section section section section"
+            "aside aside aside aside"
+            "footer footer footer footer";
+        }
+        span {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      /*  Media Query for devices wider than 800px  */
+      @media only screen and (min-width: 800px) {
+        body {
+          background-color: rgb(215, 57, 181);
+        }
+        .container {
+          /* Keep the same layout without aside */
+          grid-template-areas:
+            "navbar navbar navbar navbar"
+            "section section section section"
+            "footer footer footer footer";
+        }
+        span {
+          display: block;
+          text-align: center;
+        }
+        aside {
+          display: none;
+          /* Hide aside section on large screens */
+        }
+      }
+      .bdr {
+        border: 2px solid black;
+        padding: 12px 23px;
+        background-color: white;
+      }
+      nav {
+        grid-area: navbar;
+      }
+      section {
+        grid-area: section;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar section -->
+      <nav class="bdr">
+        <span>Home</span>
+        <span>About Us</span>
+        <span>Contact</span>
+        <span>Sign in</span>
+      </nav>
+
+      <!-- Main content area -->
+      <section class="bdr">
+        <h2>Learn about CSS in hindi</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+          temporibus magnam aut labore!
+        </p>
+      </section>
+
+      <!-- Aside content (optional block, hidden on large screens) -->
+      <aside class="bdr">
+        <h1>More about us</h1>
+      </aside>
+    </div>
+
+    <!-- Footer content -->
+    <footer class="bdr">Copyright CodewithBeeba</footer>
+  </body>
+</html>

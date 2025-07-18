@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      .box {
+        font-size: 73px;
+        text-align: center;
+        background-color: red;
+        color: white;
+        display: none;
+      }
+
+      /* For very small screens (like small phones) - up to 300px wide */
+      @media (max-width: 300px) {
+        #box1 {
+          display: block;
+          background-color: cyan;
+        }
+      }
+
+      /* For small devices (e.g., phones) - between 300px and 500px */
+      @media (min-width: 300px) and (max-width: 500px) {
+        #box2 {
+          display: block;
+          background-color: rgb(118, 31, 155);
+        }
+      }
+
+      /* For medium-sized devices (e.g., tablets) - between 500px and 700px */
+      @media (min-width: 500px) and (max-width: 700px) {
+        #box3 {
+          display: block;
+          background-color: rgb(118, 31, 155);
+        }
+      }
+
+      /* For larger screens (e.g., laptops, desktops) - 700px and above */
+      @media (min-width: 700px) and (max-width: 3000px) {
+        #box4 {
+          display: block;
+          background-color: rgb(118, 31, 155);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Media Queries in CSS -->
+    <!-- Each box represents a type of device. Only one shows based on size of screen -->
+    <div class="box" id="box1">I'm an Iphone</div>
+    <div class="box" id="box2">I'm an Ipad</div>
+    <div class="box" id="box3">I'm a MacBook</div>
+    <div class="box" id="box4">I'm an IMac PC</div>
+  </body>
+</html>
