@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transitions</title>
+    <style>
+      body {
+        background-color: rgb(239, 113, 239);
+      }
+      #box {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(249, 120, 142);
+
+        /* Transition effect settings  */
+        /* transition-property: background-color, height, width, border-radius, font-size;*/
+        transition-duration: 1s; /* Total transition time */
+        transition-timing-function: ease-in; /* Smooth transition in and out */
+        transition-delay: 0.5s; /* Optional: delay before transition starts */
+      }
+      #box:hover {
+        background-color: rgb(49, 198, 244);
+        height: 400px;
+        width: 400px;
+        border-radius: 100px;
+        font-size: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS TRANSITIONS</h2>
+    <div class="container">
+      <div id="box">This is my box</div>
+    </div>
+  </body>
+</html>

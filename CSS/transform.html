@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        height: 80vh;
+        background-color: burlywood;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* The box that will be transformed on hover */
+      .box {
+        display: flex;
+        background-color: rgb(134, 134, 233);
+        border: 3px solid black;
+        border-radius: 3px;
+        height: 250px;
+        width: 250px;
+        align-items: center;
+        justify-content: center;
+        /* transform: rotate(45deg); */
+
+        /* Enable smooth animation during transform */
+        transition: all 0.5s ease-in-out;
+        /* 
+        transition:	CSS property used to define how changes (like hover effects) should animate.
+        all	: Apply the transition to all properties that change (e.g., color, size, position, etc.). You can also write specific ones like background-color,transform, etc.
+        0.5s : Duration of the transition = 0.5 seconds
+        ease-in-out : Timing function — starts slow, gets faster in the middle, and slows down again at the end (smooth effect).
+         */
+      }
+      /* When you hover over the box, it will move diagonally */
+      .box:hover {
+        /* transform: rotate(360deg);  */
+        /* Rotates the box fully */
+
+        /* transform: skew(40deg); */
+        /* Skews the box diagonally */
+
+        /* transform: scale(2); */
+        /* Doubles the size of the box */
+
+        /* transform: translateX(123px);
+        transform: translateY(123px); */
+
+        transform: translate(123px, 123px);
+        /* What does transform: translate(123px, 123px); do?
+
+translate() is a function that moves an element from its current position.
+The values 123px, 123px specify how far the element should move horizontally (X-axis) and vertically (Y-axis).
+
+Breaking it down:
+123px: Moves the element 123 pixels to the right along the X-axis (horizontal).
+123px: Moves the element 123 pixels down along the Y-axis (vertical).
+*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Transitions in CSS -->
+    <div class="container">
+      <div class="box">Hello Everyone!</div>
+    </div>
+  </body>
+</html>
