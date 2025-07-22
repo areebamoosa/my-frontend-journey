@@ -67,5 +67,289 @@
     <div class="container">
       <div class="box">This is a box</div>
     </div>
+
+    <!-- Animations in CSS -->
+
+    <!-- 
+    
+CSS animations provide a smooth and gradual way to animate an element's style changes from one keyframe to another.
+
+Components of CSS Animations:
+
+CSS animations consist of two components:
+1.Keyframes
+2.Animation properties
+
+CSS @keyframes:
+@keyframes define the styles you want browsers to apply smoothly to an element at some specified key moments (frames).
+
+How to define change-color's keyframes
+@keyframes change-color {
+  /* The first keyframe */
+  0% {background-color: purple;}
+  /* The last keyframe */
+  100% {background-color: yellow;}
+}
+
+Here's what we did in the snippet above:
+
+We created the @keyframes at-rule named change-color.
+We defined a keyframe for browsers to apply when an associated element's animation is at its zero percent (0%) duration.
+We defined a keyframe for browsers to apply when an associated element's animation is at its one hundred percent (100%) duration.
+
+The important rule (!important) does not work in keyframes. Browsers will ignore any keyframe declaration with an !important rule.
+
+CSS Animation Properties:
+
+CSS animation properties inform browsers about the animation you wish to apply to a specific element.
+
+In other words, CSS animation properties describe the animation's attributes, such as its name, duration, direction, and iteration.
+
+The nine (9) types of CSS animation properties are:
+
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count
+animation-direction
+animation-play-state
+animation-fill-mode
+animation
+
+
+CSS animation-name property:
+The CSS animation-name property defines the name of the @keyframes at-rules containing the styles you wish to apply to a specific element.
+
+example:
+
+div {
+  width: 150px;
+  height: 150px;
+  animation-name: change-color;
+}
+
+@keyframes change-color {
+  from {background-color: purple;}
+  to {background-color: yellow;}
+}
+Here's what we did in the snippet above:
+
+The animation-name property specifies the @keyframes we wish to apply to the div element.
+We created change-color's @keyframes ruleset.
+We defined two keyframes for browsers to use when the div element's animation is at its zero percent (0%) and one hundred percent (100%) duration.
+Tip: You can use the keyword none to deactivate an animation.
+
+CSS animation-duration property:
+The CSS animation-duration property defines the time to complete one animation cycle.
+
+Note the following:
+
+The animation-duration property must be in milliseconds (ms) or seconds (s) units.
+animation-duration's value must be zero or positive. Otherwise, browsers will ignore the duration declaration.
+Zero seconds (0s) is animation-duration's default value
+
+How to animate an element's color change within three seconds:
+div {
+  width: 150px;
+  height: 150px;
+  animation-name: change-color;
+  animation-duration: 3s;
+}
+
+@keyframes change-color {
+  from {background-color: purple;}
+  to {background-color: yellow;}
+}
+
+Here's what we did in the snippet above:
+
+The animation-name property specifies the @keyframes we wish to apply to the div element.
+The animation-duration property sets the animation's runtime for one cycle to three seconds (3s).
+
+CSS animation-timing-function property:
+The CSS animation-timing-function property defines an animation's implementation timing (speed) throughout its duration.
+
+In other words, the animation-timing-function property specifies the speed for implementing the animation at various intervals of its duration.
+
+The values the animation-timing-function property accepts are:
+
+ease: Starts the animation slowly. Then speeds it up and ends it slowly. ease is the animation-timing-function property's default value. It is equivalent to cubic-bezier(0.25, 0.1, 0.25, 1).
+ease-in: Starts the animation slowly with a gradual increase in speed. It is equivalent to cubic-bezier(0.42, 0, 1, 1).
+ease-out: Starts fast and ends the animation slowly. It is equivalent to cubic-bezier(0, 0, 0.58, 1).
+ease-in-out: Starts and ends the animation slowly. It is equivalent to cubic-bezier(0.42, 0, 0.58, 1).
+linear: Starts and ends the animation using a consistent speed throughout the animation's duration. It is equivalent to cubic-bezier(0, 0, 1, 1).
+
+How to animate an element's width change using a linear speed:
+div {
+  width: 150px;
+  height: 150px;
+  background-color: purple;
+  animation-name: change-width;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+}
+
+@keyframes change-width {
+  from {width: 50px;}
+  to {width: 100%;}
+}
+
+Here's what we did in the snippet above:
+
+The animation-name property specifies the @keyframes we wish to apply to the div element.
+The animation-duration property sets the animation's runtime for one cycle to seven seconds (7s).
+The linear timing function applied a consistent speed to the div's animation.
+We created change-width's @keyframes ruleset.
+We defined two keyframes for browsers to apply when the div's animation is at zero percent (0%) and one hundred percent (100%) duration.
+
+CSS animation-delay property:
+The CSS animation-delay property defines how long browsers should wait before starting an animation.
+
+In other words, use animation-delay to specify whether the animation should start immediately from the beginning, immediately from a specific time, or later (after some delay).
+
+
+CSS animation-iteration-count property:
+The CSS animation-iteration-count property defines the number of times browsers should repeat an animation.
+
+Note the following:
+
+1 is animation-iteration-count's default value.
+The animation-iteration-count property accepts non-integer values—for instance, 0.5 tells browsers to play half of a single animation cycle.
+animation-iteration-count does not accept negative values.
+An infinite value means browsers should repeat the animation forever.
+
+
+CSS animation-direction property:
+The CSS animation-direction property specifies whether the animation's first iteration should run forward or backward. It also defines whether browsers should alternate the direction of subsequent iterations.
+
+The values animation-direction accepts are:
+
+normal: Play the animation in the normal direction (that is, forward). normal is animation-direction's default value.
+reverse: Play the animation in the reverse direction (backward).
+alternate: Play the first animation cycle in the normal direction. Then, alternates the subsequent iterations between the backward and forward directions.
+alternate-reverse: Play the first animation cycle in the reverse direction. Then, alternates the subsequent iterations between the forward and backward directions.
+
+How to animate an element's width change while starting each animation cycle backward
+div {
+  width: 70px;
+  height: 50px;
+  animation-name: change-width;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes change-width {
+  from {width: 70px; background-color: purple;}
+  to {width: 100%; background-color: orange;}
+}
+
+CSS animation-play-state property:
+The CSS animation-play-state property specifies whether the browser is running or has paused a specific animation.
+
+The values the animation-play-state property accepts are:
+
+running: Specifies that the browser is running the animation. running is animation-play-state's default value.
+paused: Specifies that the browser has paused the animation.
+Here's an example:
+
+div {
+  width: 70px;
+  height: 50px;
+  animation-name: change-width;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+div:hover {
+  animation-play-state: paused;
+}
+
+@keyframes change-width {
+  from {width: 70px; background-color: purple;}
+  to {width: 100%; background-color: orange;}
+}
+
+
+CSS animation-fill-mode property:
+The CSS animation-fill-mode property defines the styles browsers should apply to an element before (or after) its animation runs.
+
+The values the animation-fill-mode property accepts are:
+
+none: Browsers will apply no style to the element before or after the animation runs. none is animation-fill-mode's default value.
+forwards: The element will retain the last keyframe's style declarations when the animation ends. (Note: The animation-direction and animation-iteration-count properties determine the last keyframe.)
+backwards: The element will retain the first keyframe's style declarations during the animation-delay period. (Note: The animation-direction property determines the first keyframe.)
+both: Browsers will apply both the forwards and backwards rules. Therefore, the animation properties will extend in both directions.
+
+
+How to style an element after its animation ends:
+div {
+  width: 70px;
+  height: 50px;
+  background-color: green;
+  animation-name: change-width;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes change-width {
+  from {width: 70px; background-color: purple;}
+  to {width: 100%; background-color: orange;}
+}
+
+Here's what we did in the snippet above:
+
+The animation-name property specifies the @keyframes we wish to apply to the div element.
+The animation-duration property sets the animation's runtime for one cycle to five seconds (5s).
+We used the ease-in-out timing function to apply a slow start and slow end speed to the div's animation.
+The animation-fill-mode property tells browsers to retain the last keyframe's style declarations when the animation ends.
+We created change-width's @keyframes ruleset.
+We defined two keyframes for browsers to apply when the div element's animation is at zero percent (0%) and one hundred percent (100%) duration.
+
+CSS animation Property:
+We use the animation property as a shorthand for:
+
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count
+animation-direction
+animation-play-state
+animation-fill-mode
+In other words, instead of writing:
+
+div {
+  animation-name: change-width;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-fill-mode: both;
+}
+
+You can alternatively use the animation property to shorten your code like so:
+
+div {
+  animation: 5s ease-in-out 2s 3 alternate both running change-width;
+}
+
+Here is the animation property's syntax:
+
+animation: animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state animation-name;
+
+Note:
+
+The way you arrange the time values is essential. Browsers read the first time-value as animation-duration. And they assign the second one to animation-delay.
+It is best to list animation-name last. Otherwise, browsers may assign the animation-name's value to other properties.
+
+-->
   </body>
 </html>
