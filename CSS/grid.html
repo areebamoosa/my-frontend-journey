@@ -4,90 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Grids</title>
-    <style>
-      .container {
-        display: grid;
-        grid-gap: 2rem;
-
-        /* grid-template-columns: 300px 100px 100px; */
-        /* Means 3 columns: 
-        1st = 300px, 
-        2nd = 100px, 
-        3rd = 100px */
-
-        /* grid-template-columns: 300px auto 100px; */
-        /* 1st = 300px, 
-        2nd = auto (takes remaining space), 
-        3rd = 100px */
-
-        /* grid-template-columns: 1fr 4fr 1fr; */
-        /* Fr = fraction of available space.
-        Total = 1 + 4 + 1 = 6 parts
-        So:
-        1st = 1/6
-        2nd = 4/6
-        3rd = 1/6 */
-
-        /* grid-template-columns: 300px 100px auto; */
-        /* Fixed + auto: 
-        3rd column will take remaining space */
-
-        /* grid-template-columns: repeat(3, auto); */
-        /* Same as: auto auto auto
-        Repeats the value 3 times */
-      }
-      .item {
-        background-color: pink;
-        margin: 3px;
-        border: 2px solid rgb(243, 136, 154);
-        padding: 12px 10px;
-      }
-    </style>
   </head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      /* Think of this like you're saying:
+      “I want 3 columns. Each column should be 100 pixels wide.”*/
+
+      grid-template-rows: 100px;
+      /* “I want just 1 row, and that row should be 100 pixels tall.”*/
+      /* You get 1 row And 3 equal columns*/
+
+      gap: 10px;
+    }
+
+    .item {
+      background: lightblue;
+      text-align: center;
+    }
+  </style>
   <body>
+    <!-- CSS GRIDS -->
+
+<!-- 
+
+CSS Grid :
+CSS Grid is like drawing a table or a board with rows and columns, and then putting your stuff (boxes, images, text, etc.) in the exact square you want.
+It's perfect when you want to make a layout that looks like a grid (like a chessboard, calendar, or gallery).
+
+Set Up the Grid Container :
+To start, you first need a "parent box" that becomes the grid:
+
+.container {
+  display: grid;
+}
+Now .container is a grid container and its children become grid items.
+
+Step 2: Create Rows and Columns
+Use:
+
+grid-template-columns
+grid-template-rows
+This tells the grid how many columns and rows it should have.
+
+You can also use:
+
+fr → Fraction of space
+(like "1fr 2fr" means second column is twice as big)
+
+grid-template-columns: 1fr 2fr;
+
+Repeat Columns or Rows
+You can use repeat() to avoid writing the same thing again and again:
+
+grid-template-columns: repeat(3, 1fr);
+That means → 3 columns, each taking equal space.
+
+Gap Between Items
+Use gap, column-gap, and row-gap:
+
+gap: 10px;
+This adds space between boxes in both directions.
+
+Placing Items
+Grid is smart, it automatically puts items in the next cell. But you can tell it where to go using:
+
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+
+Or shortcut:
+
+grid-column: 1 / 3;
+grid-row: 2 / 3;
+This means:
+Start at column 1 and go till before column 3
+Start at row 2 and stop before row 3
+
+Auto Rows and Auto Columns
+If you don’t define enough rows or columns, grid can add them:
+
+grid-auto-rows: 100px;
+grid-auto-columns: 1fr;
+
+Grid Template Areas (Name your cells):
+You can create named areas like a map:
+
+grid-template-areas:
+  "header header"
+  "sidebar main"
+  "footer footer";
+And then assign:
+
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: sidebar;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: footer;
+}
+
+-->
+
     <div class="container">
-      <div class="item">This is Item # 01</div>
-
-      <!-- .container is the grid parent.
-      .items are the grid children (items that are placed in the grid) -->
-
-      <div class="item">This is Item # 02</div>
-      <div class="item">This is Item # 03</div>
-      <div class="item">This is Item # 04</div>
-      <div class="item">This is Item # 05</div>
-      <div class="item">This is Item # 06</div>
-      <div class="item">This is Item # 07</div>
-      <div class="item">This is Item # 08</div>
-      <div class="item">This is Item # 09</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
     </div>
-
-    <!-- GRIDS -->
-
-    <!--  
-<style>
-    .fl{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* This would display the children elements in  three equal columns with equal width */
-        gap: 5px; /* To set a gap between  thegrid items */
-    }
-    .gr {
-        padding: 20px; 
-        background-color: #0000FF; 
-        border: 1px solid #ffff; /* I added a border all round each column for better visibility and separation of the columns */
-    }
-</style>
-
-
-<div class="gr">
-    <div class="gr">Content 1</div>
-    <div class="gr">Content 2</div>
-    <div class="gr">Content 3</div>
-    <div class="gr">Content 4</div>
-    <div class="gr">Content 5</div>
-</div>
-
-    
-    
-    -->
   </body>
 </html>

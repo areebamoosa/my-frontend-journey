@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Photo Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* We are telling the grid how many columns we want AND how wide each should be. */
+
+/* 
+
+auto-fit
+Means:
+“Fit as many columns as possible based on screen size.”
+
+So if the screen is:
+Wide = more columns
+Small = fewer columns
+Very small = maybe just 1 column!
+
+It’s automatic magic — no need to write media queries! 
+
+minmax(250px, 1fr)
+This part tells each column:
+"You must be at least 250px wide, but you can grow up to fill space like 1fr."
+250px = Minimum width (don’t shrink smaller!)
+1fr = Take remaining space fairly 
+
+Conclusion : 
+Hey Grid! Keep repeating columns that are at least 250px wide, but can stretch if there’s room. Fit as many as possible in the row depending on screen size!”
+
+On desktop: maybe 3–4 columns
+On tablet: maybe 2
+
+And no media queries needed!
+
+*/
+      gap: 15px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      filter: brightness(0.8);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>My Photo Gallery</h1>
+    </header>
+
+    <main class="gallery">
+      <img src="https://picsum.photos/300?random=1" alt="img1" />
+      <img src="https://picsum.photos/300?random=2" alt="img2" />
+      <img src="https://picsum.photos/300?random=3" alt="img3" />
+      <img src="https://picsum.photos/300?random=4" alt="img4" />
+      <img src="https://picsum.photos/300?random=5" alt="img5" />
+      <img src="https://picsum.photos/300?random=6" alt="img6" />
+      <img src="https://picsum.photos/300?random=7" alt="img7" />
+      <img src="https://picsum.photos/300?random=8" alt="img8" />
+      <img src="https://picsum.photos/300?random=9" alt="img9" />
+      <img src="https://picsum.photos/300?random=10" alt="img10" />
+    </main>
+
+    <footer>
+      <p>© 2025 My Gallery</p>
+    </footer>
+  </body>
+</html>
