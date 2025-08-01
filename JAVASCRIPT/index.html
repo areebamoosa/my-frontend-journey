@@ -15,22 +15,9 @@
     </style> -->
   </head>
   <body>
-    <!-- <script src="practice.js"></script> -->
-     
-    <!-- <script src="First.js"></script> -->
-    <!-- <script src="Variables.js"></script> -->
-    <!-- <script src="operators.js"></script> -->
-    <!-- <script src="loops.js"></script> -->
-    <!-- <script src="strings.js"></script> -->
-    <!-- <script src="arrays.js"></script> -->
-    <!-- <script src="functions.js"></script> -->
-    <!-- <script src="callback.js"></script> -->
-
     <!-- API -->
     <!-- <button id="btn"></button> -->
     <!-- <p class="fact"></p> -->
-
-    <!-- <script src="API.js"></script> -->
 
     <!-- Events in JS -->
 
@@ -45,13 +32,113 @@
      <div onmouseover="console.log('You are inside the div.')">This is a box</div> -->
     <!-- This is called inline event handling. -->
 
-    <!-- <script src="events.js"></script> -->
-
     <!-- Practice Q of Events -->
     <!-- <button id="mode">Change Mode</button> -->
 
-    <!-- <script src="practice.js"></script> -->
+    <!-- DOM  -->
 
+    <!-- <h1 id="heading">DOM</h1> -->
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iure natus eligendi blanditiis assumenda!</p>
+    <p>2nd Paragraph</p>
+    <h2 class="head">Starter Code</h2>
+    <h2 class="head">Java Script</h2> -->
+
+    <!-- <div>
+        <h3 style="visibility: hidden;">Fruits</h3>
+        <ul>
+            <li>mango</li>
+            <li>apple</li>
+            <li>grapes</li>
+        </ul>
+    </div> -->
+
+    <!-- <div id="box">This is a div</div> -->
+    <!-- <p class="para">pargaprah</p> -->
+
+    <!-- <script src="DOM.js"></script> -->
+
+    <!-- DOM Practice Q -->
+
+    <!-- <h2>Hello JavaScript</h2> -->
+
+    <!-- <div class="box">First div</div>
+    <div class="box">Second div</div>
+    <div class="box">Third div</div> -->
+
+    <!-- Extras  -->
+
+    <div class="container">
+      <div class="box" data-createdby="Areeba"></div>
+    </div>
+    <!-- Class List -->
+    <div class="box red green">I am red</div>
+
+    <!-- Events -->
+
+    <button id="btn">Click me</button>
+
+    <!-- Event Bubbling -->
+
+    <div class="container">
+      <section class="childContainer">
+        <div class="child">I am a Child.</div>
+      </section>
+    </div>
+
+    <script>
+      document.querySelector(".child").addEventListener("click", () => {
+        alert("Child was clicked!");
+      });
+      document
+        .querySelector(".childContainer")
+        .addEventListener("click", () => {
+          alert("Child Container was clicked!");
+        });
+      document.querySelector(".container").addEventListener("click", () => {
+        alert("Container was clicked!");
+      });
+
+      //over here when we click on child, automatically container and child container will also be clicked.
+
+      // to stop this we do this, after this when we click on child only that event will e invoked and no others.
+
+      document.querySelector(".child").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Child was clicked!");
+      });
+      document
+        .querySelector(".childContainer")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+          alert("Child Container was clicked!");
+        });
+      document.querySelector(".container").addEventListener("click", (e) => {
+        alert("Container was clicked!");
+      });
+
+      // Set Interval : setting a time
+
+      setInterval(() => {
+        document.querySelector(".childContainer").style.backgroud = "pink";
+      }, 3000);
+      // whatever we do inside this, it will happen after the time we assigned.
+
+      //
+    </script>
+
+    <!-- Links  -->
+
+    <!-- <script src="First.js"></script> -->
     <!-- <script src="Variables.js"></script> -->
+    <!-- <script src="operators.js"></script> -->
+    <!-- <script src="loops.js"></script> -->
+    <!-- <script src="strings.js"></script> -->
+    <!-- <script src="arrays.js"></script> -->
+    <!-- <script src="functions.js"></script> -->
+    <!-- <script src="callback.js"></script> -->
+    <!-- <script src="API.js"></script> -->
+    <!-- <script src="events.js"></script> -->
+    <!-- <script src="extras.js"></script> -->
+    <!-- <script src="practice.js"></script> -->
   </body>
 </html>
