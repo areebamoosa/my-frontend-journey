@@ -58,12 +58,14 @@ for (let i of str) {
   size++;
 }
 
+console.log("Size = ", size);
+
+
 let a = [1, 2, 3, 4, 5];
 for (let val of a) {
   console.log(val);
 }
 
-console.log("Size = ", size);
 
 //  for - in loop
 // The for in loop is used to iterate over the properties of an object. It only iterate over keys of an object which have their enumerable property set to “true”.

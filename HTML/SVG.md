@@ -1,0 +1,86 @@
+# SVG in HTML
+
+SVG stands for **Scalable Vector Graphics**.
+
+It’s a special HTML element used to create shapes, drawings, icons, charts, and more — using vector graphics that don’t lose quality no matter how much you zoom in or resize!
+
+## Key Features
+
+- Shapes stay crystal clear at any size
+- Can be styled with CSS
+- You can add animations & interactivity
+- Great for logos, charts, illustrations
+
+---
+
+## 1. Circle in SVG
+
+```html
+<svg id="svghello" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle id="hello" cx="50" cy="50" r="50" fill="red"></circle>
+</svg>
+```
+
+`xmlns="http://www.w3.org/2000/svg"` → tells the browser "this SVG follows the official SVG XML rules."
+
+`cx="50"` → X position of the circle center
+
+`cy="50"` → Y position of the circle center
+
+`r="50"` → Radius
+
+`fill="red"` → Circle color
+
+You can do same for rectangle, polygon & ellipse by having their tags.
+
+## 2. Line in SVG
+
+```html
+<svg id="svghello" height="100" xmlns="http://www.w3.org/2000/svg">
+  <line
+    x1="50"
+    y1="50"
+    x2="50"
+    y2="0"
+    style="stroke: green; stroke-width: 3"
+  ></line>
+</svg>
+```
+
+#### Explanation of Each Part : 
+
+| Attribute        | Meaning                                                            |
+| ---------------- | ------------------------------------------------------------------ |
+| `x1="0"`         | Starting point on the X-axis (left side)                           |
+| `y1="50"`        | Starting point on the Y-axis (middle vertically)                   |
+| `x2="100"`       | Ending point on the X-axis (right side)                            |
+| `y2="50"`        | Ending point on the Y-axis (same vertical level → horizontal line) |
+| `style="..."`    | Styling the line                                                   |
+| `stroke:blue`    | Line color is blue                                                 |
+| `stroke-width:3` | Line thickness is 3 pixels                                         |
+
+## 3. Star shape by polygon tag
+
+Polygon draws a shape by connecting a list of points — kind of like connect-the-dots.
+
+```html
+<svg id="svghello" height="200" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="100,10,40,180,190,60,10,60,160,180" fill="yellow"></polygon>
+</svg>
+```
+#### Explanation :
+
+| Point | X   | Y   |
+| ----- | --- | --- |
+| 1     | 100 | 10  |
+| 2     | 40  | 180 |
+| 3     | 190 | 60  |
+| 4     | 10  | 60  |
+| 5     | 160 | 180 |
+
+Why 10 values?
+Because each point (or corner) of a polygon needs 2 values:
+1 for the x-coordinate
+1 for the y-coordinate
+
+These are the tips and corners of a 5-point star — the polygon connects them in order to create the star shape.

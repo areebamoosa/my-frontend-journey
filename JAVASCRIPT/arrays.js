@@ -253,3 +253,7 @@ console.log(arr2.reduce(red));
 
 Array.from("Areeba");
 // this wil output this => {'A','r','e','e','b','a'};
+
+
+
+

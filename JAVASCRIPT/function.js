@@ -172,3 +172,110 @@ const func1 = (x) => {
 
 func1(34);
 func1(80);
+
+// Hoisting
+
+// Function Declarations & Function Expresssions.
+
+// Function Declaration
+// Is like writing the plan on paper first, so the interpreter (JavaScript) knows it exists early on, even before reaching that line.
+
+sayHi(); // works fine
+
+function sayHi() {
+  console.log("Hello!");
+}
+// JavaScript hoists the function to the top in memory, so it works even before you write it in the code.
+
+// Function Expression
+// Is like you don’t define the function until you do the action (store it in a variable).
+// So if you try to use it before that, it doesn't exist yet!
+
+sayHello(); // Error: Cannot access 'sayHello' before initialization
+
+let sayHello = function () {
+  console.log("Hi there!");
+};
+
+// It only exists after that line runs — not before.
+
+// Real Life Example for better understanding of both the functions.
+// Imagine: You're Making a Pizza
+// Think of your JavaScript code like a kitchen. And inside the kitchen, you can define pizza recipes (functions).
+// There are two ways to write recipes in your kitchen (JavaScript):
+
+//1. Function Declaration – The Recipe is Written in a Book
+
+makePizza(); // You can make pizza before reading the recipe
+
+function makePizza() {
+  console.log("Pizza is ready!");
+}
+
+// The recipe is written in your cookbook (before cooking even starts).
+// So even if you try to cook pizza before opening the book, it works — because the recipe was already known.
+
+// This is called hoisting — the function gets moved to the top automatically in JavaScript memory.
+// You can call it before the code reaches the function.
+
+// 2. Function Expression – The Recipe is Written on a Note During Cooking
+
+cookPizza(); //Error: cookPizza is not a function (yet!)
+
+let cookPizza = function () {
+  console.log("🍕 Cooking pizza...");
+};
+
+// This time, the recipe is written during cooking on a piece of paper.
+// If you try to cook before the recipe is written — it won’t work. The kitchen doesn’t know how to make pizza yet.
+// This is not hoisted — JavaScript doesn't move it to the top.
+// You can only use it after it’s created.
+
+
+// Hoisting?
+// Hoisting means:
+// JavaScript remembers some things earlier than you wrote them — and moves them to the top of the file in memory, before your code even runs.
+
+// Imagine a Stage Play...
+// You're writing a play (like a script), and you say:
+
+sayHello();
+
+function sayHello() {
+  console.log("Hi!");
+}
+// Even though you called sayHello() before writing the function…
+// JavaScript is like the smart director — it moves the function to the top backstage before the play starts.
+// So when the play begins, everything is already ready to go.
+
+// What Gets Hoisted?
+
+
+// | Thing                  | Hoisted?              | Notes                               |
+// | ---------------------- | --------------------- | ----------------------------------- |
+// | `function declaration` | ✅ Yes                 | Can be used before it’s written     |
+// | `var` variables        | ✅ Yes (but undefined) | Gets hoisted, but not with value    |
+// | `let` & `const`        | ❌ No                  | Not hoisted like `var`, gives error |
+// | `function expression`  | ❌ No                  | Not hoisted                         |
+
+
+// Example with Variables
+
+console.log(name); // undefined
+
+var name = "Areeba";
+// JavaScript secretly does this:
+
+var name;
+console.log(name); // undefined
+name = "Areeba";
+// But with let and const:
+
+console.log(age); //Error
+
+let age = 25;
+// Because let and const are NOT hoisted like var.
+
+// In conclusion
+// Hoisting means JavaScript remembers function declarations and var variables early, before the code runs, and brings them “up” to the top in memory — so you can use them even before writing them.
+
