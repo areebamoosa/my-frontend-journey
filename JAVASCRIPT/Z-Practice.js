@@ -1,4 +1,4 @@
-// Variables & Data Types :
+// Basic Questions to practice JavaScript concepts.
 
 // Q1 : Create a const obj called "product" to store info as shown in picture
 
@@ -70,7 +70,7 @@ for(let num = 0; num <= 100; num++ ){
     }
 }
 
-// Q5 : Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters a correct value. 
+// Q6 : Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters a correct value. 
 
 let gameNum = 16;
 let userNum = prompt("Guess the Game Number : ");
@@ -84,7 +84,7 @@ console.log("Congratulations, You guessed the right number! ");
 // prompt always gives us a string number, so we have to use one equal sign only in this case. ( != )
 // double qual to ham tab dety jab ham num ko as a string treat krty "16"
 
-// Q6: Prompt the user to enter their full name. Generate a username for them based on their input. Start username with @ , followed by their full name and ending with a full name length.
+// Q7: Prompt the user to enter their full name. Generate a username for them based on their input. Start username with @ , followed by their full name and ending with a full name length.
 // eg : user name = "areebamoosa" , username should be "@areebamoosa16"
 
 let fullName = prompt("Enter your Full Name");
@@ -92,7 +92,7 @@ let length = fullName.length;
 let userName = "@" + fullName + length;
 console.log(userName);
 
-// Q7 : For a given array with marks of students -> [87,97,44,37,76,60]. Find the avg of class.
+// Q8 : For a given array with marks of students -> [87,97,44,37,76,60]. Find the avg of class.
 
 let marks = [87,97,44,37,76,60];
 let sum = 0;
@@ -105,7 +105,7 @@ let avg = sum / marks.length;
 
 console.log(`Average of the class is ${avg}`);
 
-// Q8 : For a given array with prices of 5 items -> [250,645,300,900,50]. All items have an offer of 10% off on them. Change the array to store final price after applying offer.
+// Q9 : For a given array with prices of 5 items -> [250,645,300,900,50]. All items have an offer of 10% off on them. Change the array to store final price after applying offer.
 
 let items =  [250,645,300,900,50];
 
@@ -116,7 +116,7 @@ for ( let val of items){
     i++;
 }
 
-// Q9 : Create an array to store companies -> "Apple" , "Microsoft" , " Uber"  , "Google" , "Netflix"
+// Q10 : Create an array to store companies -> "Apple" , "Microsoft" , " Uber"  , "Google" , "Netflix"
 // a. Remove first company from the array
 // b. Remove Uber and add Careem at its place
 // c. Add Amazon at the end.
@@ -134,7 +134,7 @@ console.log(comp);
 console.log(comp.push("Amazon"));
 console.log(comp);
 
-// Q10 : Create a function using the "function" keyword that takes a string as an argument & returns the number of vowels in string.
+// Q11 : Create a function using the "function" keyword that takes a string as an argument & returns the number of vowels in string.
 
 function countVowels(str){
     let count = 0;
@@ -147,7 +147,7 @@ function countVowels(str){
 }
 countVowels("areeba");
 
-// Q11 : Create an arrow function to perform the same task.
+// Q12 : Create an arrow function to perform the same task.
 
 function countVowels = (str) => {
     let count = 0;
@@ -159,7 +159,7 @@ function countVowels = (str) => {
     return count;
 }
 
-// Q12 : For a given array of numbers, print the square of each value using the for each loop
+// Q13 : For a given array of numbers, print the square of each value using the for each loop
 
 let arr = [1,2,3,4,5];
 
@@ -167,12 +167,7 @@ arr.forEach((num) => {
     console.log(num*num);
 });
 
-// Q13 : We are given array of marks of students.Filter out the marks of students that scored 90+.
-
-
-// Q14 : Take a number n as input from user. Create an array of numbers from 1 to n.Use the reduce method to calculate sum of all numbers in the array. Use the reduce method to calculate product of all numbers in the array. 
-
-// Q15 : Create a H2 Heading element with text - "Hello Javascript". Append "from Apna College students" to this text using JS.
+// Q14 : Create a H2 Heading element with text - "Hello Javascript". Append "from Apna College students" to this text using JS.
 
 let h2 = document.querySelector("h2");
 console.dir(h2.innerText);
@@ -180,7 +175,7 @@ console.dir(h2.innerText);
 h2.innerText = h2.innerText + " from Apna College Students";
 //here we are cocanetating two strings by using plus sign.
 
-Q16 : Create 3 divs with common class name - "box". Access them and add some unique text to each of them.
+// Q15 : Create 3 divs with common class name - "box". Access them and add some unique text to each of them.
 
 let divs = document.querySelectorAll(".box");
 
@@ -196,7 +191,7 @@ for (div of divs){
     idx++;
 }
 
-// Q17 : Create a new element. Give it a new text "click me", background colour of red & text color of white. Insert the button as the first element inside the body tag.
+// Q16 : Create a new element. Give it a new text "click me", background colour of red & text color of white. Insert the button as the first element inside the body tag.
 
 let newEl = document.createElement("button");
 newEl.innerText = "Click me!";
@@ -206,12 +201,12 @@ newEl.style.color = "white";
 
 document.querySelector("body").prepend(newEl);
 
-// Q18 : Create a <p> tag in html, give it a class & some styling. Now create a new class in CSS & try to append this class to the <p> element. Did you notice how you overwrite the class name when you add a new one? Solve this problem using class list.
+// Q17 : Create a <p> tag in html, give it a class & some styling. Now create a new class in CSS & try to append this class to the <p> element. Did you notice how you overwrite the class name when you add a new one? Solve this problem using class list.
 
 let para = document.querySelector("p");
 para.classList.add("newPara");
 
-// Q19 : Create a toggle button that changes the screen to dark-mode when clicked and light-mode when clicked again.
+// Q18 : Create a toggle button that changes the screen to dark-mode when clicked and light-mode when clicked again.
 
 let modeBtn = document.querySelector("#mode");
 let currMod = "light";
