@@ -1,3 +1,8 @@
+# COLOURS
+
+## HTML Structure
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,3 +35,12 @@
     <p id="thirdpara">This is a Paragraph</p>
   </body>
 </html>
+```
+
+## Output in Browser
+
+### COLOURS IN CSS
+
+* **First Paragraph** → Pink color
+* **Second Paragraph** → RGB(91, 24, 167) color
+* **Third Paragraph** → Hex `#ff88ff` color
