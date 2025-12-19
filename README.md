@@ -2,33 +2,26 @@
 
 Welcome to **My Frontend Journey** – a personal breakdown of my learning path in front-end development.
 
-Although I’ve already completed the initial learning of **HTML** and **CSS**, this repository restructures that knowledge into a clear, topic-based documentation format.
+This repository brings together my notes and understanding of core frontend technologies, organised in a clear, topic-wise manner for easy reference and revision.
 
-## 📘  What's Inside
+## 📘 What’s Inside
 
-- Structured notes on core HTML & CSS concepts  
-- Ongoing updates as I continue to learn and grow  
+- Well-structured notes on **HTML**, **CSS**, **Tailwind CSS**, and **JavaScript**
+- Clear explanations written from my own learning experience
+- Concepts broken down in a simple, easy-to-revisit format
 
-🚀  What's Next
+## 🧠 Technologies Covered
 
-This repository will expand to include my continued learning in:
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Tailwind CSS**
 
-- **JavaScript** – for interactive functionality  
-- **CSS Frameworks** – including **Tailwind CSS** and **Bootstrap**  
-- **React** – for building dynamic user interfaces  
+## 📌 Note
 
-These technologies form the core stack of my front-end development journey.
-
-## 🎯  Purpose
-
-This repo helps me:
-- Reinforce and organise what I've learned  
-- Track my progress over time   
-
-##  Still in Progress
-
-I'm continuously updating this repository as I revisit key topics, explore deeper concepts, and build more complex projects.
+All content in this repository reflects my learning journey and understanding at the time of study.  
+The focus is on clarity, consistency, and strong fundamentals.
 
 ---
 
-Feel free to explore or star if you find it helpful!
+⭐ Feel free to explore or star the repository if you find it helpful!
