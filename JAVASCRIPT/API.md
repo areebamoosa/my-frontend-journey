@@ -9,8 +9,7 @@ An API is simply a medium to fetch or send data between interfaces.
 
 Let's say you want to make an application that provides the user with some real-time data fetched from the server or maybe even allows you to modify or add data to some other endpoint. This is made possible by the API or the Application Programming Interface.
 
-
-**Definition:** 
+**Definition:**
 An API is basically set of rules that allows two applications to communicate and share data with each other.
 
 ## API URL
@@ -35,10 +34,13 @@ const btn = document.querySelector("#btn");
 ```javascript
 // This is an async function that fetches cat facts from the API
 const getFacts = async () => {
-  console.log("Getting data...");
-
   // Fetching data from the API using fetch() method
   let response = await fetch(URL);
+
+  //  fetch() is a built-in JavaScript function
+  // It sends a HTTP request to a server
+  // Here, we’re sending a GET request
+  // We use await keyword because fetching takes time
 
   // Logging the raw response object (still in JSON format)
   console.log(response); // This shows status, headers, etc.
@@ -46,8 +48,9 @@ const getFacts = async () => {
   // Converting the response into usable JSON data
   let data = await response.json();
 
-  // Logging the parsed JSON data
-  console.log(data);
+  // API sends data as raw JSON text
+  // JavaScript needs an object
+  // This line Converts raw response → JavaScript object
 
   // Showing one of the facts on the webpage (2nd fact from the array)
   factPara.innerText = data[1].text;
@@ -60,14 +63,14 @@ The same function above can also be written using Promise chaining (instead of a
 
 ```javascript
 function getFacts() {
-    fetch(URL) // fetch returns a Promise
+  fetch(URL) // fetch returns a Promise
     .then((response) => {
-        return response.json(); // convert response to JSON
+      return response.json(); // convert response to JSON
     })
     .then((data) => {
-        console.log(data); // log the data
-        factPara.innerText = data[2].text; // show a fact in the paragraph
-    })
+      console.log(data); // log the data
+      factPara.innerText = data[2].text; // show a fact in the paragraph
+    });
 }
 ```
 
