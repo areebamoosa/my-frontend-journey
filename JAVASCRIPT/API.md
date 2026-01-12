@@ -42,15 +42,18 @@ const getFacts = async () => {
   // Here, we’re sending a GET request
   // We use await keyword because fetching takes time
 
-  // Logging the raw response object (still in JSON format)
-  console.log(response); // This shows status, headers, etc.
-
   // Converting the response into usable JSON data
   let data = await response.json();
 
   // API sends data as raw JSON text
   // JavaScript needs an object
   // This line Converts raw response → JavaScript object
+
+  // fetch() returns a Response object, not the actual data.
+  // The response is like a box that contains information about the request.
+  // It includes status, headers, and metadata, but not the data itself.
+  // To get the actual data, we must open the box using response.json().
+  // response.json() converts JSON data into a JavaScript object we can use.
 
   // Showing one of the facts on the webpage (2nd fact from the array)
   factPara.innerText = data[1].text;
