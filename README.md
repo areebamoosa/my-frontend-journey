@@ -17,7 +17,7 @@ This repository brings together my notes and understanding of core frontend tech
 
 This repository is focused on **basic revisions** and building a **strong base** in frontend fundamentals.
 
-For deeper exploration and advanced work in **React**, **Next.js** & **TypeScript**, I’ve documented my learning here:
+For deeper exploration and advanced learnings in **React**, **Next.js** & **TypeScript**, I’ve documented my learning here:
 
 👉 [My Road to Frontend Mastery](https://github.com/areebamoosa/my-road-to-frontend-mastery)
 
